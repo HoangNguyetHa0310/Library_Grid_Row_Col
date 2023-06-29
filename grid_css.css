@@ -1,4 +1,3 @@
-
     /* Column: .col
     Prefix class:
         - c - mobile  (mobile là cột kí hiệu là "c" nghĩa là column (cột) )
@@ -8,6 +7,45 @@
     
 
 /* column trong mobile kí hiệu là c  */
+
+/* C - o ( o ở đây nghĩa là offset (vị trí) ) */
+
+  /* M -o ( o ở đây nghĩa là offset (vị trí) ) */
+
+
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+
+.grid.wide {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.row.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.row.no-gutters .col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .c-0 {
     display: none;
 }
@@ -72,8 +110,6 @@
     max-width: 100%;
 }
 
-/* C - o ( o ở đây nghĩa là offset (vị trí) ) */
-
 .c-o-1 {
     margin-left: 8.33333%;
 }
@@ -118,10 +154,8 @@
     margin-left: 91.66667%;
 }
 
-
-
-/*  Tablet */
-@media(min-width:740px){
+/* >= Tablet */
+@media (min-width: 740px) {
     .row {
         margin-left: -8px;
         margin-right: -8px;
@@ -136,7 +170,6 @@
         display: none;
     }
 
-    /* column tablet */
     .m-1,
     .m-2,
     .m-3,
@@ -212,7 +245,6 @@
         max-width: 100%;
     }
 
-    /* M -o ( o ở đây nghĩa là offset (vị trí) ) */
     .m-o-1 {
         margin-left: 8.33333%;
     }
@@ -258,15 +290,8 @@
     }
 }
 
-/* Tablet -> PC low resolution (PC có độ phân giải thấp ) */
-@media(min-width:740px) and (max-width:1023px) {
-    .wide {
-        width: 644px;
-    }
-}
-
-/* PC medium resolution (PC có độ phân giải trung bình) */
-@media (min-width:1113px) {
+/* PC medium resolution > */
+@media (min-width: 1113px) {
     .row {
         margin-left: -12px;
         margin-right: -12px;
@@ -372,7 +397,6 @@
         max-width: 100%;
     }
 
-    /* l - o ( o ở đây nghĩa là offset (vị trí) ) */
     .l-o-1 {
         margin-left: 8.33333%;
     }
@@ -418,15 +442,22 @@
     }
 }
 
-/* PC có độ phân giải từ 1024 trở lên  */
+/* Tablet - PC low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wide {
+        width: 644px;
+    }
+}
+
+/* > PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {
     .wide {
-       width: 984px;
+        width: 984px;
     }
 
-    .wied.row {
+    .wide .row {
         margin-left: -12px;
-        margin-left: -12px;
+        margin-right: -12px;
     }
 
     .wide .row.sm-gutter {
@@ -573,34 +604,3 @@
         margin-left: 91.66667%;
     }
 }
-
-
-
-.grid {
-    width: 100%;
-    display: block;
-    padding: 0;
-}
-
-.grid.wide {
-    max-width: 1200px;
-    margin: 0 auto;
-
-}
-
-.row {
-    display: flex;
-    flex-wrap: nowrap ;
-    margin-left: -4px;
-    margin-right: -4px;
-}
-
-
-
-.col {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-
-
